@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BlueStacks Games App</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f6f9;
+      color: #333;
+    }
+
+    header {
+      background-color: #001f3f;
+      color: #fff;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    header h1 {
+      font-size: 28px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #1abc9c;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #1a73e8, #003366);
+      color: white;
+      padding: 80px 40px;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 48px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .hero button {
+      padding: 14px 28px;
+      background-color: #1abc9c;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .hero button:hover {
+      background-color: #16a085;
+    }
+
+    .section {
+      padding: 60px 40px;
+    }
+
+    .section h2 {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 40px;
+      color: #001f3f;
+    }
+
+    .game-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 30px;
+    }
+
+    .game-card {
+      background-color: white;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .game-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    .game-card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 10px;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .feature-box {
+      background-color: white;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      transition: 0.3s;
+    }
+
+    .feature-box:hover {
+      background: #e8f7f4;
+      transform: translateY(-3px);
+    }
+
+    .feature-box h3 {
+      margin-top: 10px;
+      color: #0c3c78;
+    }
+
+    footer {
+      background-color: #001f3f;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      .hero h2 {
+        font-size: 32px;
+      }
+
+      header, nav ul {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      nav ul {
+        gap: 10px;
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>BlueStacks</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Top Games</a></li>
+        <li><a href="#">Download</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Play Android Games on Your PC</h2>
+    <p>The fastest and most powerful Android gaming platform for Windows & Mac.</p>
+    <button onclick="downloadClicked()">Download BlueStacks</button>
+  </section>
+
+  <section class="section">
+    <h2>Top Games on BlueStacks</h2>
+    <div class="game-grid">
+      <div class="game-card">
+        <img src="free fire.jpg" />
+
+        <p>Free Fire</p>
+      </div>
+      <div class="game-card">
+        <img src="clash of cans.jpeg"  />
+        <p>Clash of Clans</p>
+      </div>
+      <div class="game-card">
+        <img src="gnenshin impact.jpeg"  />
+        <p>Genshin Impact</p>
+      </div>
+      <div class="game-card">
+        <img src="among us.png"  />
+        <p>Among Us</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Why Choose BlueStacks?</h2>
+    <div class="features">
+      <div class="feature-box">
+        <img src="https://img.icons8.com/ios-filled/50/1abc9c/controller.png"/>
+        <h3>Superior Performance</h3>
+        <p>Play games with enhanced FPS, controls, and visuals.</p>
+      </div>
+      <div class="feature-box">
+        <img src="https://img.icons8.com/ios-filled/50/1abc9c/settings.png"/>
+        <h3>Customization</h3>
+        <p>Keymapping, resolution settings, and advanced tweaks.</p>
+      </div>
+      <div class="feature-box">
+        <img src="https://img.icons8.com/ios-filled/50/1abc9c/multiple-devices.png"/>
+        <h3>Cross-Platform</h3>
+        <p>Available for both Windows and macOS platforms.</p>
+      </div>
+      <div class="feature-box">
+        <img src="https://img.icons8.com/ios-filled/50/1abc9c/security-checked.png"/>
+        <h3>Safe & Secure</h3>
+        <p>Trusted by millions. No malware, no compromise.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 BlueStacks Inc. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function downloadClicked() {
+      console.log("Download button clicked!");
+      alert("Download is starting... (Demo only)");
+    }
+  </script>
+
+</body>
+</html>
